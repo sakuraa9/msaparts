@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Heavy Machinery Portfolio</title>
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1b1b1b;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            color: #FFD700;
+        }
+        nav {
+            background-color: #FFD700;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: #003366;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+            margin: auto;
+            max-width: 1000px;
+        }
+        .bio, .portfolio, .contact, .database-section {
+            margin-bottom: 40px;
+        }
+        .portfolio img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .contact p {
+            margin: 0;
+        }
+        footer {
+            background-color: #003366;
+            color: #FFD700;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .database-section {
+            display: none;
+        }
+        .database-section.visible {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Heavy Machinery Portfolio</h1>
+</header>
+
+<nav>
+    <a href="#bio">Bio</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+    <a href="#database">Private Section</a>
+</nav>
+
+<div class="container">
+
+    <section id="bio" class="bio">
+        <h2>About Me</h2>
+        <p>Welcome to my heavy machinery portfolio. I specialize in providing top-of-the-line equipment for various industrial needs. With years of experience in the industry, I am dedicated to delivering quality products that meet the highest standards.</p>
+    </section>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Product Portfolio</h2>
+        <div class="product">
+            <h3>Product Name 1</h3>
+            <img src="product1.jpg" alt="Product 1">
+            <p>Description of Product 1</p>
+        </div>
+        <div class="product">
+            <h3>Product Name 2</h3>
+            <img src="product2.jpg" alt="Product 2">
+            <p>Description of Product 2</p>
+        </div>
+        <!-- Add more products as needed -->
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Information</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: +123 456 7890</p>
+    </section>
+
+    <section id="database" class="database-section">
+        <h2>Private Section</h2>
+        <p>This section is accessible only by you. Here you can manage your content.</p>
+        <button onclick="showDatabase()">Access Private Database</button>
+        <div id="database-content">
+            <p>Here you can store and retrieve information securely.</p>
+            <!-- Add database functionality here -->
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Your Name. All rights reserved.</p>
+</footer>
+
+<script>
+    function showDatabase() {
+        var dbSection = document.querySelector('.database-section');
+        dbSection.classList.toggle('visible');
+    }
+</script>
+
+</body>
+</html>
